@@ -70,7 +70,7 @@ def handle_message(event):
 
         if user_msg in faq:
             bot_msg = faq[user_msg]
-        elif user_msg.lower() in ["選單", "menu", "home", "主選單", "H"]:
+        elif user_msg.lower() in ["選單", "menu", "home", "主選單", "h"]:
             bot_msg = menu
         elif user_msg in table:
             buy = table[user_msg]["buy"]
