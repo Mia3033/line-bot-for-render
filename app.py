@@ -66,11 +66,11 @@ def handle_message(event):
         # 當使用者傳入文字訊息時
         line_bot_api = MessagingApi(api_client)
         user_msg = event.message.text
-        bot_msg = TextMessage(text=f"What you saidddddd is: {user_msg}")
+        bot_msg = TextMessage(text=f"What you said is: {user_msg}")
 
         if user_msg in faq:
             bot_msg = faq[user_msg]
-        elif user_msg.lower() in ["選單", "menu", "home", "主選單", "a"]:
+        elif user_msg.lower() in ["選單", "menu", "home", "主選單", "H"]:
             bot_msg = menu
         elif user_msg in table:
             buy = table[user_msg]["buy"]
